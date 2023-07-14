@@ -155,11 +155,117 @@
 
 ## 情報・データ
 
-例
-
-- ユーザー情報（ID, パスワード, メールアドレス, 学習進捗等）
+<!-- - ユーザー情報（ID, パスワード, メールアドレス, 学習進捗等）
 - コース情報（コース名, 内容, 関連する 3D モデル等）
-- 学習記録（ユーザー ID, コース ID, 学習時間等）
+- 学習記録（ユーザー ID, コース ID, 学習時間等） -->
+
+```mermaid
+erDiagram
+  User ||..o{ Course : ""
+  Course ||--|{ Content : ""
+  Content ||--|| SourceCode : ""
+  Content ||--|| ModelFile : "" 
+  mCourse ||--|{ Course : ""
+  mContent ||--|{ Content : "" 
+  mCourse ||--|{ mCategory : ""
+  mContent ||--|| mSourceCode : ""
+  mContent ||--|| mModelFile : ""
+  mCategory ||--|{ Category : ""
+  mSourceCode ||--|{ SourceCode : ""
+  mModelFile ||--|{ ModelFile : ""
+
+  User {
+    bigint id PK
+    string name "ユーザー名"
+    string email
+    string password
+    timestamp created_at
+    timestamp updated_at
+  }
+
+  Course {
+    bigint id PK
+    references user FK
+    references m_course FK
+    int total_time "コース総学習時間"
+    int achievement_rate "コース内コンテンツ完了率"
+    timestamp created_at
+    timestamp updated_at
+  }
+
+  Content {
+    bigint id PK
+    reference course FK
+    reference m_content FK
+    int learning_time "コンテンツの学習時間"
+    int complete_flag "1=完了, 0=未完了"
+    timestamp created_at
+    timestamp updated_at
+  }
+
+  Category {
+    bigint id PK
+    reference m_category FK
+    timestamp created_at
+    timestamp updated_at
+  }
+
+  SourceCode {
+    bigint id
+    reference content FK
+    string name
+    blob text "ソースコードの内容(バイナリ)"
+    timestamp created_at
+    timestamp updated_at
+  }
+
+  ModelFile {
+    bigint id
+    reference content FK
+    string name
+    blob model_data "3Dモデルファイル(バイナリ)"
+    timestamp created_at
+    timestamp updated_at
+  }
+
+  mCourse {
+    bigint id PK
+    string name
+    timestamp created_at
+    timestamp updated_at
+  }
+
+  mContent {
+    bigint id PK
+    string name
+    timestamp created_at
+    timestamp updated_at
+  }
+
+  mCategory {
+    bigint id PK
+    string name
+    timestamp created_at
+    timestamp updated_at
+  }
+
+  mSourceCode {
+    bigint id
+    reference m_content FK
+    blob text "ソースコードの内容(バイナリ)"
+    timestamp created_at
+    timestamp updated_at
+  }
+
+  mModelFile {
+    bigint id
+    reference m_content FK
+    blob model_data "3Dモデルファイル(バイナリ)"
+    timestamp created_at
+    timestamp updated_at
+  }
+
+```
 
 # 非機能要件
 
