@@ -32,6 +32,7 @@
 ## 3. ボードの使用方法
 
 - 新しいタスクは Product Backlog に追加する。
+  - タスクは基本的に issue から作成すること。
 - スプリント開始時に担当タスクを Sprint Backlog へ移動する。
 - タスク開始時にタスクを In Progress へ移動する
 - タスク完了時にタスクを現在の Sprint Complete へ移動する。
