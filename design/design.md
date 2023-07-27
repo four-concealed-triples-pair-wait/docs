@@ -57,3 +57,18 @@
 ## ワイヤーフレーム
 
 [figma URL](https://www.figma.com/file/UkDpYPAXCMK2xBxcXA1Hkf/%E3%83%AF%E3%82%A4%E3%83%A4%E3%83%BC%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0?type=design&node-id=13-140&mode=design&t=t6i4SRKVEOY0TC9F-0)
+
+## システム概要図
+
+<!-- システム概要を示す図(figma)が1枚以上あると、発表のときにも使えると思います -->
+
+## UIデザイン
+
+<!-- 各画面のデザインを作成したら, こちらにfigmaのURLを記載してください-->
+
+# データ設計
+
+## 論理設計
+
+<!-- RDBかNoSQLか未定ですが, データモデリングについて記載します -->
+<!-- 必要であれば, テーブル定義書やER図とかも書きます -->
