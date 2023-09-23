@@ -2,7 +2,7 @@
 
 # 概要
 
-本ドキュメントは、3D 都市モデル「Plateau」を使用した人探しゲームの Web サービスの開発についての設計書である。
+本ドキュメントは、3D 都市モデル「Plateau」を使用したプログラミングと統計機械学習の学習用 Web サービスの開発についての設計書である。
 
 # システム設計
 
@@ -27,8 +27,8 @@
 |      項目      |           技術            | バージョン | 詳細                                     |
 | :------------: | :-----------------------: | :--------: | :--------------------------------------- |
 | フロントエンド |         React.js          |   v18.0    | ユーザインターフェースの作成に使用する。 |
-| フロントエンド |          Deck.gl          |        | 3D モデルのレンダリングに使用する。      |
-|  バックエンド  |          Golong           |   v3.10    |                                          |
+| フロントエンド |         Three.js          |    r130    | 3D モデルのレンダリングに使用する。      |
+|  バックエンド  |          Python           |   v3.10    |                                          |
 |  データベース  |                           |            | データストレージとして使用する。         |
 | 3D 都市モデル  |          Plateau          |            |                                          |
 |   コンテナ化   |          Docker           |            |                                          |
@@ -49,14 +49,14 @@
 # 画面設計
 
 ## サイトマップ
-<!-- 
+
 [figma URL](https://www.figma.com/file/VJiOiy9VSHJai0a73iUv56/%E3%82%B5%E3%82%A4%E3%83%88%E3%83%9E%E3%83%83%E3%83%97?type=whiteboard&node-id=0-1&t=t6i4SRKVEOY0TC9F-0)
 
-![サイトマップ](image/サイトマップ.png) -->
+![サイトマップ](image/サイトマップ.png)
 
 ## ワイヤーフレーム
 
-<!-- [figma URL](https://www.figma.com/file/UkDpYPAXCMK2xBxcXA1Hkf/%E3%83%AF%E3%82%A4%E3%83%A4%E3%83%BC%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0?type=design&node-id=13-140&mode=design&t=t6i4SRKVEOY0TC9F-0) -->
+[figma URL](https://www.figma.com/file/UkDpYPAXCMK2xBxcXA1Hkf/%E3%83%AF%E3%82%A4%E3%83%A4%E3%83%BC%E3%83%95%E3%83%AC%E3%83%BC%E3%83%A0?type=design&node-id=13-140&mode=design&t=t6i4SRKVEOY0TC9F-0)
 
 ## システム概要図
 
