@@ -25,9 +25,9 @@
 
 進行中のタスクが表示される。各メンバーが作業を開始するタスクを Sprint Backlog から In Progress へ移動させる。
 
-### 2.4 Sprint Complete
+### 2.4 Complete
 
-そのスプリントで完了したタスクが表示される。タスクが完了次第 In Progress から Sprint Backlog へ移動させる。Sprint Complete は各 Sprint 毎に作成する。
+完了したタスクが表示される。タスクが完了次第 In Progress から Complete へ移動させる。
 
 ## 3. ボードの使用方法
 
@@ -35,4 +35,4 @@
   - タスクは基本的に issue から作成すること。
 - スプリント開始時に担当タスクを Sprint Backlog へ移動する。
 - タスク開始時にタスクを In Progress へ移動する
-- タスク完了時にタスクを現在の Sprint Complete へ移動する。
+- タスク完了時にタスクを現在の Complete へ移動する。
